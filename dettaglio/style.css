@@ -1,0 +1,500 @@
+/* GENERALS */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clerfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* UTILITIES */
+
+.button{
+    border: none;
+    border-radius: 5px;
+    padding: 15px 33px 15px 41px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.pink-btn{
+    background-color: #E60B7F;
+}
+
+.gold-btn{
+    background-color: #CAA069;
+    padding: 12px 28px;
+}
+
+
+
+
+/* HEADER */
+
+.header-body{
+    position: relative;
+    background-color:  #261916;
+    height: 100px;
+    padding-left: 117px;
+}
+
+.header-body > img{
+    position: absolute;
+    z-index: 3;
+    object-position: 0 70%;
+    object-fit: none;
+    max-width: 217px;
+    height: 100%;
+}
+
+.header-nav{
+    float: right; 
+    background-image: url('img/Rectangle2.png');
+    height: 100%;
+    padding-left: 236px;
+}
+
+.nav-links{
+    height: 100%;
+    float: right;
+    margin: 0;
+    display: table;
+}
+.nav-links:first-of-type{
+    margin-right: 117px;
+}
+
+.nav-link{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.nav-link > a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    margin-left: 35px;
+}
+
+.nav-link:last-child a{
+    margin-left: 38px;
+}
+
+.nav-link > a.active::before{
+    content: '';
+    display: inline-block;
+    background-color: #CAA069;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    z-index: -1;
+}
+
+.nav-link > a > img{
+    height: 20px;
+    margin-bottom: -4px;
+}
+
+
+
+
+/* BODY */
+
+.body-container{
+    padding: 123px 0 0 0;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+section.article{
+    width: 100%;
+}
+
+.article > .headline{
+    text-align: center;
+}
+
+.headline h1{
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 45px;
+    margin: 0 0 9px 0;
+}
+
+.headline a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.article > .picture{
+    width: 100%;
+    margin: 35px 0 0 0;
+    
+}
+
+
+.picture  .picture-container{
+    margin: 0 auto;
+    max-width: 1387px;    
+    max-height: 656px;
+    overflow: hidden;
+}
+
+.picture-container > div{
+    position: relative;
+}
+
+.picture-container img{
+    max-width: 100%;
+    display: block;
+}
+
+.picture-container .round, .picture-container .date{
+    position: absolute;    
+    
+}
+
+.picture-container .round{
+    width: 196px;
+    aspect-ratio: 1;
+    background: #F7A708;
+    border-radius: 100px;
+    right: -43px;
+    bottom: -73px;
+}
+
+.picture-container .date{
+    bottom: 16px;
+    right: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    width: 100px;
+    color: white;
+}
+.picture-container .date > p{
+    margin: 0;
+}
+.picture-container .date > hr{
+    margin: 5px 0;
+    color: white;
+}
+
+
+.article > .article-body{
+    margin: 57px auto 140px auto;
+    max-width: 1036px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.article-body > .article-body-top{
+    padding: 0 0 25px 0;
+}
+
+.article-body p{
+    font-size: 18px;
+    line-height: 22px;
+    color: #534F4F;
+    margin: 25px 0;
+}
+
+.article .tail{
+    padding: 0 0 32px 50px;
+}
+
+.tail > .info{
+    margin: 0 35px 0 0;
+    float: left;
+}
+
+.info img{
+    margin: 0 12px -5px 0;
+}
+
+.info > span{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.sub-container{
+    padding: 0 38px;
+    width: 100%;
+}
+
+.sub-container h2{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+section.suggestions{
+    padding: 37px 0;
+    margin: 25px 0 0 0 ;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+
+.suggestion.left, .suggestion.left > *{
+    float: left;
+}
+.suggestion.right, .suggestion.right > *{
+    float: right;
+}
+.suggestion.right .suggestion-headline p:first-child{
+    text-align: end;
+}
+
+.suggestion .suggestion-headline{
+    margin: 0 24px 0 19px;
+}
+
+.suggestion-headline p:first-child{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #534F4F;
+    margin-bottom: 15px;
+}
+
+.suggestion-headline p:last-child{
+    font-family: 'Yeseva One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+section.comments{
+    padding: 79px 0 99px 0;
+    width: 100%;
+}
+
+.comments .comment{
+    margin: 40px 0 0 0 ;
+    position: relative;
+}
+
+.comment .comment-container *{
+    float: left;
+}
+
+.comment-container .message{
+    max-width: 707px;
+    margin: 20px 0 0 5px;
+}
+
+
+.message-head span:first-of-type{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 13px 0 0;
+}
+
+.message-head span:last-of-type{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: lightgray;
+}
+
+.message p:last-of-type{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #534F4F;
+}
+
+.comment .reply-btn{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.reply-btn > a{
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    text-decoration: none;
+}
+
+section.reply{
+    margin: 0 0 140px 0;
+    width: 100%;
+}
+
+.reply h2{
+    margin: 22px 0 ;
+}
+.reply > p:first-of-type{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.reply > form{
+    margin: 48px 0 0 0;
+    width: 100%;
+}
+
+form > *{
+    border: 1px solid #E5E5E5;
+    padding-left: 30px;
+    border-radius: 5px;
+    line-height: 52px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form #name, form #email{
+    width: calc((50% - 30px) );
+    height: 52px;
+}
+
+form #email{
+    float: right;
+}
+
+form #text{
+    width: 100%;
+    height: 200px;
+    margin: 30px 0 39px 0 ;
+    resize: none;
+}
+
+
+/* FOOTER  */
+
+footer{
+    background-color: black;
+    width: 100%;
+}
+
+footer .footer-container{
+    margin: 0 68px ;
+    padding: 0 82px;
+    border-bottom: 1px solid #CAA069;
+}
+
+.footer-container .footer-logo{
+    padding: 50px 0;
+}
+
+.footer-logo img{
+    max-height: 50px;
+}
+
+.footer-info{
+    width: 100%;
+    display: table;
+}
+
+.footer-info .column-wrapper{
+    width: calc(100% / 2 );
+    margin-bottom: 45px;
+    display: table-cell;
+}
+
+
+
+.column-wrapper  .column{
+    width: calc(100% / 2);
+    padding-right: 20px;
+    font-family: 'Montserrat';
+    display: table-cell;
+}
+
+@media only screen and (max-width: 1100px) {
+    .footer-info .column-wrapper{
+        width: 100%;
+    }
+}
+
+.column > h3{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.column p{
+    margin-bottom: 15px;
+}
+
+.column p a{
+    text-decoration: none;
+    color: #C4C4C4;
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+
+footer > .footer-bottom{
+    padding: 27px;
+}
+
+.socials{
+    float: left;
+}
+
+.socials i{
+    color: #C4C4C4;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.cards{
+    float: right;
+}
+
+.cards img{
+    height: 20px;
+    margin-right: 30px;
+}
