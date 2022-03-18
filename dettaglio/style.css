@@ -182,21 +182,18 @@ section.article{
     display: block;
 }
 
-.picture-container .round, .picture-container .date{
-    position: absolute;    
-    
-}
-
 .picture-container .round{
+    position: absolute;    
     width: 196px;
     aspect-ratio: 1;
     background: #F7A708;
     border-radius: 100px;
     right: -43px;
     bottom: -73px;
+    padding: 20px 40px;
 }
 
-.picture-container .date{
+.round .date{
     bottom: 16px;
     right: 15px;
     font-family: 'Montserrat', sans-serif;
