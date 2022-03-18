@@ -16,6 +16,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
+    text-decoration: none;
     line-height: 22px;
 }
 
@@ -23,13 +24,24 @@
     cursor: pointer;
 }
 
-.pink-btn{
+.button.pink-btn{
     background-color: #E60B7F;
 }
 
-.gold-btn{
+.button.gold-btn{
     background-color: #CAA069;
     padding: 12px 28px;
+}
+
+.button.yellow{
+    background-color: #F7A708;
+}
+
+.button.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .btn-selector{
@@ -191,10 +203,38 @@ main section.jumbotron{
 }
 
 .article .image{
-    width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 0;
 }
 
-.image .caption{
+.image img{
+    max-width: 100%;
+    display: block;
+}
+
+.image .image-tag{
+    position: absolute;
+    top: -58px;
+    right: -2px;
+}
+
+.image .image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.62);
+    display: none;
+}
+
+.image:hover .image-overlay{
+    display: block;
+}
+
+.article .caption{
     display: block;
     margin: 16px 0 14px 0;
     font-family: 'Helvetica';
@@ -203,9 +243,28 @@ main section.jumbotron{
     letter-spacing: 0.1em;
 }
 
-.image .underline{
+.article .underline{
     width: 48px;
     border-bottom: 2px solid #E60B7F;
+}
+
+.image .image-tag{
+    position: absolute;
+    top: -58px;
+    right: -2px;
+    
+}
+
+.image-tag > div{
+    transform-origin:right bottom;
+    padding: 18px 27px ;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    transform: rotate(-90deg);
+    border-radius: 5px 0 0 0;
+    background: white;
 }
 
 .article .title{
@@ -215,6 +274,44 @@ main section.jumbotron{
     font-size: 35px;
     line-height: 40px;
     margin-top: 12px;
+}
+
+.page-selector{
+    padding: 0 26px;
+    height: 260px;
+}
+
+.selector-container{
+    border-top: 1px solid #C4C4C4;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectors{
+    display: flex;
+}
+
+.selectors > a{
+    display: flex;
+    margin-right: 35px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: black;
+}
+
+.selectors > a.selected{
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    aspect-ratio: 1;
+    background: #F7A708;
+    border-radius: 20px;
+    
 }
 
 /* FOOTER  */
