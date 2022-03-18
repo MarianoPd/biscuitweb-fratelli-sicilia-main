@@ -161,9 +161,13 @@ section.article{
     
 }
 
+.picture{
+    padding: 0 28px;
+    margin: 0 auto;
+}
 
 .picture  .picture-container{
-    margin: 0 auto;
+    
     max-width: 1387px;    
     max-height: 656px;
     overflow: hidden;
@@ -452,6 +456,7 @@ footer .footer-container{
 @media only screen and (max-width: 1100px) {
     .footer-info .column-wrapper{
         width: 100%;
+        display: table;
     }
 }
 
